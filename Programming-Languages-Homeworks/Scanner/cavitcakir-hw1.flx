@@ -1,0 +1,194 @@
+DIGIT [0-9]
+  int lineNum = 1;
+  int find_pos(char *,int,int,char);
+  char * take_out_from_string(char *,int,int,int);
+  void print_int(char *);
+  char * remove_trailing_zeros(char *);
+%%
+
+"//".*
+[/][*][^*]*[*]+([^*/][^*]*[*]+)*[/]
+\n {
+  lineNum = lineNum + 1;
+}
+
+[-]{DIGIT}+[E]?{DIGIT}* {
+                          printf("%d tNEGINT (%s) (",lineNum,yytext);
+
+                          int dot_pos = 0, e_pos = 0,minus_pos = -1,first_non_zero = -1;
+                          size_t len = strlen(yytext);
+                          e_pos = find_pos(yytext,len,0,'E');
+
+                          if(atoi(yytext) == 0){
+                            printf("-");
+                          }
+
+                          if(e_pos == -1){
+                            print_int(yytext);
+                          }
+                          else{
+                            print_int(take_out_from_string(yytext,len,0,e_pos));
+                            printf("E");
+                            print_int(take_out_from_string(yytext,len,e_pos+1,len));
+                          }
+                          printf(")\n");
+                        }
+
+{DIGIT}+[E]?{DIGIT}* {
+                          printf("%d tPOSINT (%s) (",lineNum,yytext);
+
+                          int dot_pos = 0, e_pos = 0,minus_pos = -1,first_non_zero = -1;
+                          size_t len = strlen(yytext);
+                          e_pos = find_pos(yytext,len,0,'E');
+
+                          if(e_pos == -1){
+                            print_int(yytext);
+                          }
+                          else{
+                            print_int(take_out_from_string(yytext,len,0,e_pos));
+                            printf("E");
+                            print_int(take_out_from_string(yytext,len,e_pos+1,len));
+                          }
+                          printf(")\n");
+                        }
+
+[-]{DIGIT}+[.]?{DIGIT}*[E]?[-]?{DIGIT}* {
+                          printf("%d tNEGREAL (%s) (",lineNum,yytext);
+
+                          int dot_pos = 0, e_pos = 0,minus_pos = -1,first_non_zero = -1;
+                          size_t len = strlen(yytext);
+
+                          e_pos = find_pos(yytext,len,0,'E');
+                          dot_pos = find_pos(yytext,len,0,'.');
+                          minus_pos = find_pos(yytext,len,1,'-');
+                          first_non_zero = find_pos(yytext,len,0,'0');
+
+                          if(atoi(yytext) == 0){
+                            printf("-");
+                          }
+
+                          if(e_pos == -1){
+                            print_int(take_out_from_string(yytext,len,0,dot_pos));
+                            printf(".");
+                            printf("%s",remove_trailing_zeros(take_out_from_string(yytext,len,dot_pos+1,len)));
+                          }
+                          else{
+                            print_int(take_out_from_string(yytext,len,0,dot_pos));
+                            printf(".");
+                            printf("%s",remove_trailing_zeros(take_out_from_string(yytext,len,dot_pos+1,e_pos)));
+                            printf("E");
+                            print_int(take_out_from_string(yytext,len,e_pos+1,len));
+                          }
+                          printf(")\n");
+                        }
+
+{DIGIT}+[.]?{DIGIT}*[E]?[-]?{DIGIT}* {
+                          printf("%d tPOSREAL (%s) (",lineNum,yytext);
+
+                          int dot_pos = 0, e_pos = 0,minus_pos = -1,first_non_zero = -1;
+                          size_t len = strlen(yytext);
+
+                          e_pos = find_pos(yytext,len,0,'E');
+                          dot_pos = find_pos(yytext,len,0,'.');
+                          minus_pos = find_pos(yytext,len,0,'-');
+                          first_non_zero = find_pos(yytext,len,0,'0');
+
+                          if(e_pos == -1){
+                            print_int(take_out_from_string(yytext,len,0,dot_pos));
+                            printf(".");
+                            printf("%s",remove_trailing_zeros(take_out_from_string(yytext,len,dot_pos+1,len)));
+                          }
+                          else{
+                            print_int(take_out_from_string(yytext,len,0,dot_pos));
+                            printf(".");
+                            printf("%s",remove_trailing_zeros(take_out_from_string(yytext,len,dot_pos+1,e_pos)));
+                            printf("E");
+                            print_int(take_out_from_string(yytext,len,e_pos+1,len));
+                          }
+                          printf(")\n");
+                        }
+
+"int" printf("%d tINT\n",lineNum);
+"real" printf("%d tREAL\n",lineNum);
+"if" printf("%d tIF\n",lineNum);
+"endif" printf("%d tENDIF\n",lineNum);
+"vector" printf("%d tVECTOR\n",lineNum);
+"matrix" printf("%d tMATRIX\n",lineNum);
+"transpose" printf("%d tTRANSPOSE\n",lineNum);
+"," printf("%d tCOMMA\n",lineNum);
+".*" printf("%d tDOTPROD\n",lineNum);
+"(" printf("%d tLPAR\n",lineNum);
+")" printf("%d tRPAR\n",lineNum);
+"=" printf("%d tASSIGNM\n",lineNum);
+"-" printf("%d tMINUS\n",lineNum);
+"+" printf("%d tPLUS\n",lineNum);
+"/" printf("%d tDIV\n",lineNum);
+"*" printf("%d tCOMMA\n",lineNum);
+";" printf("%d tSEMI\n",lineNum);
+"==" printf("%d tEQUL\n",lineNum);
+"!=" printf("%d tINEQ\n",lineNum);
+"<" printf("%d tLT\n",lineNum);
+"<=" printf("%d tLE\n",lineNum);
+">" printf("%d tGT\n",lineNum);
+">=" printf("%d tGE\n",lineNum);
+"[" printf("%d tLBRAC\n",lineNum);
+"]" printf("%d tRBRAC\n",lineNum);
+"&&" printf("%d tAND\n",lineNum);
+"||" printf("%d tOR\n",lineNum);
+[a-zA-Z_]+[a-zA-Z0-9_]* printf("%d tIDENT (%s)\n",lineNum,yytext);
+" " ;
+
+%%
+
+char * remove_trailing_zeros(char * remove_this){
+  size_t len = strlen(remove_this);
+  char *newString = malloc(len + 1 + 1);
+  int last_non_zero = len-1;
+  for(; last_non_zero > 0; last_non_zero--){
+    if(remove_this[last_non_zero] != '0'){
+      break;
+    }
+  }
+
+  if(last_non_zero == -1){
+    newString[0] = '0';
+  }
+  else{
+    int i = 0;
+    for(; i< last_non_zero+1; i++){
+      newString[i] = remove_this[i];
+    }
+  }
+    return newString;
+}
+
+void print_int(char * print_this){
+  int new_int = atoi(print_this);
+  printf("%i", new_int);
+}
+
+char * take_out_from_string(char *yytext, int len, int start_from, int finish){
+  char *newString = malloc(len + 1 + 1);
+  int i = start_from, j = 0;
+  for(;i<finish;i++){
+    newString[j++] = yytext[i];
+  }
+  return newString;
+}
+
+int find_pos(char *yytext, int len, int start_from, char find_this)
+{
+  int i = start_from;
+  for(;i<len;i++)
+  {
+    if(yytext[i] == find_this){
+      return i;
+    }
+  }
+  return -1;
+}
+
+int main() {
+  yylex();
+  return 0;
+}

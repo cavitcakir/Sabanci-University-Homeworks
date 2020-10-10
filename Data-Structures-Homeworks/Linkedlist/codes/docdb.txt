@@ -1,0 +1,15 @@
+computer 21
+Sabanci 4
+Sabanci 6
+University 6
+University 12
+Sabanci 6
+computer 17
+Cavit 12
+University 3
+computer 9
+computer 6
+Sabanci 2
+University 9
+Cavit 6
+Elmaci 6

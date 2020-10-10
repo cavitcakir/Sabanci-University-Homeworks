@@ -1,0 +1,42 @@
+%{
+//(Important!) Include the correct header file.
+
+#include "cavitcakir-ex1.h"
+#include "cavitcakir-ex1.tab.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+%}
+IDENT [a-zA-Z_][a-zA-Z0-9_]*
+INT [0-9]+(E[0-9]+)?
+STRING \"([^\"]*)\"
+
+%option yylineno
+
+%%
+"int" return tINT;
+"string" return tSTRING;
+"return" {return tRETURN;};
+"print" return tPRINT;
+"(" {return tLPAR;};
+"," return tCOMMA;
+"=" return tASSIGNM;
+"+" return tPLUS;
+"*" return tSTAR;
+"{" {return tLBRAC;};
+")" {return tRPAR;};
+"%" return tMOD;
+"-" {return tMINUS;};
+"/" return tDIV;
+";" {return tSEMI;};
+"}" return tRBRAC;
+{IDENT} {yylval.node_union.ident = strdup(yytext); return tIDENT; };
+
+"\n"
+[ \t]+
+{INT}    { return tINTVAL;};
+{STRING} { return tSTRINGVAL;};
+. { /* pass any other character to the parser */
+  return yytext[0];
+}
+%%
