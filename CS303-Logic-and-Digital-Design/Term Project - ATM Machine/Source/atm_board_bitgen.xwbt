@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\DemirDemirel\Desktop\tekrarbaslayalim\atm_board.ncd
+OUTFILE=C:\Users\DemirDemirel\Desktop\tekrarbaslayalim\atm_board.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4tq144
+WORKINGDIR=C:\Users\DemirDemirel\Desktop\tekrarbaslayalim
+LICENSE=WebPack
+USER_INFO=211629117_0_0_751

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/projects/tekrarbaslayalim/test_11_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_11" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/test_11/LED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LED[7:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/digit4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit4[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit4[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/digit3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit3[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit3[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/digit2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit2[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit2[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/digit1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit1[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/BTN3" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTN3</obj_property>
+      <obj_property name="ObjectShortName">BTN3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/BTN2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTN2</obj_property>
+      <obj_property name="ObjectShortName">BTN2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/BTN1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTN1</obj_property>
+      <obj_property name="ObjectShortName">BTN1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/SW" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SW[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/uut/atm/balance" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">balance[15:0]</obj_property>
+      <obj_property name="ObjectShortName">balance[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_11/uut/atm/password" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">password[3:0]</obj_property>
+      <obj_property name="ObjectShortName">password[3:0]</obj_property>
+   </wvobject>
+</wave_config>

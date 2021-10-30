@@ -1,0 +1,4 @@
+verilog work "atm_board.v"
+verilog work "clk_divider.v"
+verilog work "debouncer.v"
+verilog work "atm_machine.v"

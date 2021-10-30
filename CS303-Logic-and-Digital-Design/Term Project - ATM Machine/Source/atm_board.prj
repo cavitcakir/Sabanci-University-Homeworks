@@ -1,0 +1,5 @@
+verilog work "ssd.v"
+verilog work "debouncer.v"
+verilog work "clk_divider.v"
+verilog work "atm_machine.v"
+verilog work "atm_board.v"

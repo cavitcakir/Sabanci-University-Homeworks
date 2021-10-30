@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Nov 15 01:13:52 2019
+
+drc -z hybrid_cla.ncd hybrid_cla.pcf
+
+DRC detected 0 errors and 0 warnings.

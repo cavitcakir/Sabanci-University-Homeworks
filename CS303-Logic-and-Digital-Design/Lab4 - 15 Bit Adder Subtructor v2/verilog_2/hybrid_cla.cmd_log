@@ -1,0 +1,14 @@
+xst -intstyle ise -ifn "C:/Users/veyseler/Desktop/cavitcakir_SectionA_Lab3/verilog_2/hybrid_cla.xst" -ofn "C:/Users/veyseler/Desktop/cavitcakir_SectionA_Lab3/verilog_2/hybrid_cla.syr" 
+xst -intstyle ise -ifn "C:/Users/veyseler/Desktop/cavitcakir_SectionA_Lab3/verilog_2/hybrid_cla.xst" -ofn "C:/Users/veyseler/Desktop/cavitcakir_SectionA_Lab3/verilog_2/hybrid_cla.syr" 
+xst -intstyle ise -ifn "C:/Users/veyseler/Desktop/cavitcakir_SectionA_Lab3/verilog_2/hybrid_cla.xst" -ofn "C:/Users/veyseler/Desktop/cavitcakir_SectionA_Lab3/verilog_2/hybrid_cla.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-4 hybrid_cla.ngc hybrid_cla.ngd  
+map -intstyle ise -p xc3s100e-tq144-4 -cm area -ir off -pr off -c 100 -o hybrid_cla_map.ncd hybrid_cla.ngd hybrid_cla.pcf 
+par -w -intstyle ise -ol high -t 1 hybrid_cla_map.ncd hybrid_cla.ncd hybrid_cla.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml hybrid_cla.twx hybrid_cla.ncd -o hybrid_cla.twr hybrid_cla.pcf 
+bitgen -intstyle ise -f hybrid_cla.ut hybrid_cla.ncd 
+xst -intstyle ise -ifn "C:/Users/veyseler/Desktop/cavitcakir_SectionA_Lab3/verilog_2/hybrid_cla.xst" -ofn "C:/Users/veyseler/Desktop/cavitcakir_SectionA_Lab3/verilog_2/hybrid_cla.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-4 hybrid_cla.ngc hybrid_cla.ngd  
+map -intstyle ise -p xc3s100e-tq144-4 -cm area -ir off -pr off -c 100 -o hybrid_cla_map.ncd hybrid_cla.ngd hybrid_cla.pcf 
+par -w -intstyle ise -ol high -t 1 hybrid_cla_map.ncd hybrid_cla.ncd hybrid_cla.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml hybrid_cla.twx hybrid_cla.ncd -o hybrid_cla.twr hybrid_cla.pcf 
+bitgen -intstyle ise -f hybrid_cla.ut hybrid_cla.ncd 

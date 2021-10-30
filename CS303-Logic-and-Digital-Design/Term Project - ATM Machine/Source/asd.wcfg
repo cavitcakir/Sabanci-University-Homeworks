@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/projects/tekrarbaslayalim/test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/test/LED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LED[7:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/digit4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit4[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit4[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/digit3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit3[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit3[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/digit2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit2[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit2[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/digit1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit1[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/BTN3" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTN3</obj_property>
+      <obj_property name="ObjectShortName">BTN3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/BTN2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTN2</obj_property>
+      <obj_property name="ObjectShortName">BTN2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/BTN1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTN1</obj_property>
+      <obj_property name="ObjectShortName">BTN1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/SW" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SW[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/uut/atm/passCnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">passCnt[2:0]</obj_property>
+      <obj_property name="ObjectShortName">passCnt[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/uut/atm/my_timer/start_timer_5sec" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_timer_5sec</obj_property>
+      <obj_property name="ObjectShortName">start_timer_5sec</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/uut/atm/my_timer/isTimeUp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isTimeUp</obj_property>
+      <obj_property name="ObjectShortName">isTimeUp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/uut/atm/my_timer/timeCnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">timeCnt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">timeCnt[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/uut/atm/current_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">current_state[7:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[7:0]</obj_property>
+   </wvobject>
+</wave_config>

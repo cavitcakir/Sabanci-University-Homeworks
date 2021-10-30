@@ -1,0 +1,30 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Xilinx/projects/tekrarbaslayalim/test_11_isim_beh.exe -prj C:/Xilinx/projects/tekrarbaslayalim/test_11_beh.prj work.test_11 work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Xilinx/projects/tekrarbaslayalim/ssd.v" into library work
+Analyzing Verilog file "C:/Xilinx/projects/tekrarbaslayalim/debouncer.v" into library work
+Analyzing Verilog file "C:/Xilinx/projects/tekrarbaslayalim/clk_divider.v" into library work
+Analyzing Verilog file "C:/Xilinx/projects/tekrarbaslayalim/atm_machine.v" into library work
+Analyzing Verilog file "C:/Xilinx/projects/tekrarbaslayalim/atm_board.v" into library work
+Analyzing Verilog file "C:/Xilinx/projects/tekrarbaslayalim/test_11.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "C:/Xilinx/projects/tekrarbaslayalim/test_11.v" Line 20: Port a is not connected to this instance
+Completed static elaboration
+Compiling module clk_divider
+Compiling module debouncer
+Compiling module timer5
+Compiling module timer2_5
+Compiling module atm_machine
+Compiling module ssd
+Compiling module atm_board
+Compiling module test_11
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 9 Verilog Units
+Built simulation executable C:/Xilinx/projects/tekrarbaslayalim/test_11_isim_beh.exe
+Fuse Memory Usage: 29316 KB
+Fuse CPU Usage: 953 ms

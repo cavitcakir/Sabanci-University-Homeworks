@@ -1,0 +1,8 @@
+MO atm NULL atm_machine.v vlg2A/atm.bin 1576431650
+MO timer5 NULL atm_machine.v vlg62/timer5.bin 1576768551
+MO clk_divider NULL clk_divider.v vlg70/clk__divider.bin 1576768551
+MO atm_machine NULL atm_machine.v vlg4E/atm__machine.bin 1576768551
+MO ssd NULL ssd.v vlg5E/ssd.bin 1576768551
+MO atm_board NULL atm_board.v vlg31/atm__board.bin 1576768552
+MO timer2_5 NULL atm_machine.v vlg57/timer2__5.bin 1576768551
+MO debouncer NULL debouncer.v vlg03/debouncer.bin 1576768551

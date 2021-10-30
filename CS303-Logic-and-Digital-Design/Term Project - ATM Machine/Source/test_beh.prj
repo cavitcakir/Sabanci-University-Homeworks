@@ -1,0 +1,4 @@
+verilog work "atm_machine.v"
+verilog work "atm_board.v"
+verilog work "test.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

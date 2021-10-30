@@ -1,0 +1,5 @@
+set -tmpdir "C:/Xilinx/projects/tekrarbaslayalim/xst/projnav.tmp"
+set -xsthdpdir "C:/Xilinx/projects/tekrarbaslayalim/xst"
+elaborate
+-ifn atm_machine.prj
+-ifmt mixed

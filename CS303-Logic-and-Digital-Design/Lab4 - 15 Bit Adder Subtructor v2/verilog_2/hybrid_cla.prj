@@ -1,0 +1,3 @@
+verilog work "schm.v"
+verilog work "CLA.v"
+verilog work "hybrid_cla.v"
